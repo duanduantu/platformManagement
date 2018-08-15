@@ -52,9 +52,8 @@ header{
 .refresh:hover{
     background:#F3F3F3;
 }
-.wrapper,.list-wrapper{
+.wrapper,.list-wrapper,.pagination-wrapper{
     width:95%;
-    /*height:110px;*/
     margin:20px auto;
     border:1px solid #ddd;
 }
@@ -176,4 +175,79 @@ tr:last-child td{
 }
 td:last-child,th:last-child{
     border-right:0;
+}
+.pagination-wrapper{
+    position:fixed;
+    bottom:20px;
+    left:2.5%;
+    background:#fff;
+    height:50px;
+    display:flex;
+    align-items:center;
+    /*justify-content:space-between;*/
+}
+.branches{
+    width:120px;
+    height:38px;
+    position:relative;
+    border:1px solid #ddd;
+    margin-left:10px;
+}
+.branches-image{
+    position:absolute;
+    width:20px;
+    height:20px;
+    right:10px;
+    top:9px;
+}
+.branches-text{
+    position:absolute;
+    display:inline-block;
+    text-align:center;
+    line-height:38px;
+    left:15px;
+}
+.total{
+    flex:1;
+    text-align:right;
+    margin-right:20px;
+}
+.numbers{
+    position:relative;
+    text-align:center;
+    width:36px;
+    height:28px;
+    line-height:28px;
+    border-radius:4px;
+    border:1px solid #c8cccf;
+    color:#6a6f77;
+    outline:0;
+    margin-right:3px;
+    cursor:default;
+}
+.numbers:hover{
+    border-color:#13C2C2;
+}
+.numbers.first{
+    background:#13C2C2;
+    color:#fff;
+}
+.numbers.last{
+    margin-right:30px;
+}
+.left-arrow,.right-arrow{
+    position:absolute;
+    width:10px;
+    height:10px;
+    top:9px;
+    left:13px;
+}
+#pages{
+    width:36px;
+    height:28px;
+    margin-left:10px;
+    margin-right:10px;
+}
+.last-page{
+    margin-right:20px;
 }
