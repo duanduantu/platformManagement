@@ -52,13 +52,13 @@ header{
 .refresh:hover{
     background:#F3F3F3;
 }
-.wrapper{
+.wrapper,.list-wrapper{
     width:95%;
     /*height:110px;*/
     margin:20px auto;
     border:1px solid #ddd;
 }
-.search-parent{
+.search-parent,.list-parent{
     width:100%;
     height:50px;
     display:flex;
@@ -72,26 +72,26 @@ header{
     height:100%;
     position:relative;
 }
-.filter-image,.pick-image{
+.filter-image,.pick-image,.list-image{
     position:absolute;
     width:20px;
     height:20px;
     left:20px;
     top:15px;
 }
-.filter-text,.pick-text{
+.filter-text,.pick-text,.list-text{
     position:absolute;
     display:inline-block;
     text-align:center;
     line-height:50px;
     left:45px;
 }
-.pick-filter{
+.pick-filter,.data-list{
     width:120px;
     height:100%;
     position:relative;
 }
-.search-result{
+.search-result,.add-button{
     width:90px;
     background:#fff;
     margin-right:20px;
@@ -125,4 +125,55 @@ input[type="text"]{
     outline:0;
     padding:0 1em;
     text-decoration:none;
+}
+.data-table{
+    width:100%;
+    border:0px solid #ddd;
+    border-collapse: collapse;
+    text-align:center;
+    background:#fff;
+}
+.data-table tr{
+    height:50px;
+}
+.data-table th{
+    background:#F9FAFC;
+}
+.edit,.detail,.delete{
+    display:inline;
+}
+.edit{
+    color:#1ABC9C;
+    margin-right:30px;
+}
+.detail{
+    color:#13C2C2;
+    margin-right:10px;
+}
+.delete{
+    color:red;
+}
+td:first-child{
+    width:12.4%;
+}
+td:nth-child(2){
+    width:17.5%;
+}
+td:nth-child(3){
+    width:47.5%;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.data-table td,.data-table th{
+    border-top: 0;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 0;
+}
+tr:last-child td{
+    border-bottom:0;
+}
+td:last-child,th:last-child{
+    border-right:0;
 }
