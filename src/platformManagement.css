@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background:#F6F7F9;
+}
+header{
+    background:#F3F3F3;
+    width:100%;
+    height:50px;
+    display:flex;
+    justify-content:space-between ;
+    align-items:center;
+    border-bottom:2px solid #E4E4E4;
+}
+.header-title{
+    position:relative;
+    margin-left:30px;
+}
+.header-title:before{
+    position:absolute;
+    content:'';
+    width:5px;
+    height:25px;
+    background:#1ABC9C;
+    left:-10px;
+}
+.refresh{
+    width:90px;
+    height:30px;
+    background:#FFF;
+    cursor:pointer;
+    border:1px solid #ddd;
+    margin-right:30px;
+    position:relative;
+}
+.refresh-image{
+    position:absolute;
+    width:20px;
+    height:20px;
+    left:10px;
+    top:5px;
+}
+.refresh-text{
+    position:absolute;
+    display:inline-block;
+    text-align:center;
+    line-height:30px;
+    right:10px;
+}
+.refresh:hover{
+    background:#F3F3F3;
+}
+.wrapper{
+    width:95%;
+    /*height:110px;*/
+    margin:20px auto;
+    border:1px solid #ddd;
+}
+.search-parent{
+    width:100%;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#F3F3F3;
+    border-bottom:1px solid #ddd;
+}
+.filter-search{
+    flex:1;
+    height:100%;
+    position:relative;
+}
+.filter-image,.pick-image{
+    position:absolute;
+    width:20px;
+    height:20px;
+    left:20px;
+    top:15px;
+}
+.filter-text,.pick-text{
+    position:absolute;
+    display:inline-block;
+    text-align:center;
+    line-height:50px;
+    left:45px;
+}
+.pick-filter{
+    width:120px;
+    height:100%;
+    position:relative;
+}
+.search-result{
+    width:90px;
+    background:#fff;
+    margin-right:20px;
+    text-align:center;
+    line-height:30px;
+    border:1px solid #ddd;
+}
+.filter-conditions{
+    background:#fff;
+    padding-left:43px;
+    padding-top:13px;
+    padding-bottom:13px;
+}
+.platformname,.description{
+    width:220px;
+    height:60px;
+    display:inline;
+}
+.description{
+    margin-left:50px;
+}
+input[type="text"]{
+    box-sizing: border-box;
+    text-align:center;
+    height:37px;
+    border-radius:4px;
+    border:1px solid #c8cccf;
+    color:#6a6f77;
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    outline:0;
+    padding:0 1em;
+    text-decoration:none;
+}
