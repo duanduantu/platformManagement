@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>三方平台管理</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="platformManagement.css"/>
+    <link rel="stylesheet" type="text/css" href="bootstrap-treeview.min.css"/>
 </head>
 <body>
+<div id="shade"></div>
 <header>
     <div class="header-title">三方平台管理</div>
     <div class="refresh"><img class="refresh-image" src="refresh.png"><span class="refresh-text">刷新</span></div>
@@ -66,6 +69,64 @@
             </table>
         </div>
     </section>
+    <section>
+        <div id="pop-parent">
+            <div id="pop-up">
+                <div id="title">
+                    <b class="title-text">添加</b>
+                    <img class="close-image" src="close.png">
+                </div>
+                <div class="content-wrapper">
+                    <div class="platform-wrapper">
+                        <span style="color:red">*</span>
+                        <label for="platform">平台名称：</label>
+                        <input type="text" name="search" id="platform" />
+                    </div>
+                    <div class="address">
+                        <span style="color:red">*</span>
+                        <label for="communicate-address">通信地址：</label>
+                        <input type="text" name="search" id="communicate-address" value="例如：192.168.1.1" />
+                    </div>
+                    <div class="port">
+                        <span style="color:red">*</span>
+                        <label for="port">端口：</label>
+                        <input type="text" name="search" id="port" value="例如：8080" />
+                    </div>
+                    <div class="park-push">
+                        <span style="color:red">*</span>
+                        <span class="park-text">停车场推送：</span>
+                        <div class="select">
+                            <input class="select-input" type="text" name="search" value="输入deviceID，按回车搜索"/>
+                            <ul class="unchecked-list">
+                                <li class="checked-all"><input class="device-id" name="deviceId" type="checkbox" value="" /><span class="unchecked-title">未选设备</span><span class="unchecked-number">4</span></li>
+                                <li class="unchecked-child"><input class="device-id" name="deviceId" type="checkbox" value="" /><span class="unchecked-text">001</span></li>
+                                <li class="unchecked-child"><input class="device-id" name="deviceId" type="checkbox" value="" /><span class="unchecked-text">002</span></li>
+                                <li class="unchecked-child"><input class="device-id" name="deviceId" type="checkbox" value="" /><span class="unchecked-text">003</span></li>
+                                <li class="unchecked-child"><input class="device-id" name="deviceId" type="checkbox" value="" /><span class="unchecked-text">004</span></li>
+                            </ul>
+                            <div class="direction">
+                                <span class="to-right-wrapper"><img class="to-right" src="right_arrow.png"></span><br>
+                                <span class="to-left-wrapper"><img class="to-left" src="left_arrow.png"></span>
+                            </div>
+                            <ul class="unchecked-list">
+                                <li class="checked-all"><input class="device-id" name="deviceId" type="checkbox" value="" /><span class="unchecked-title">已选设备</span><span class="unchecked-number">4</span></li>
+                                <li class="unchecked-child"><input class="device-id" name="deviceId" type="checkbox" value="" /><span class="unchecked-text">001</span></li>
+                                <li class="unchecked-child"><input class="device-id" name="deviceId" type="checkbox" value="" /><span class="unchecked-text">002</span></li>
+                                <li class="unchecked-child"><input class="device-id" name="deviceId" type="checkbox" value="" /><span class="unchecked-text">003</span></li>
+                                <li class="unchecked-child"><input class="device-id" name="deviceId" type="checkbox" value="" /><span class="unchecked-text">004</span></li>
+                            </ul>
+                        </div>
+                        <textarea class="textarea-content"></textarea>
+                        <div id="tree"></div>
+                    </div>
+                </div>
+                <div id="known">
+                    <div class="no">取消</div>
+                    <div class="yes">确定</div>
+                </div>
+            </div>
+        </div>
+    </section>
 </content>
 <footer>
     <section>
@@ -75,6 +136,9 @@
             <div class="numbers"><img class="left-arrow" src="left_arrow.png"></div>
             <span class="numbers first">1</span>
             <span class="numbers">2</span>
+            <span class="numbers">3</span>
+            <span class="numbers">4</span>
+            <span class="numbers">5</span>
             <span class="numbers">...</span>
             <span class="numbers">50</span>
             <div class="numbers last"><img class="right-arrow" src="right_arrow.png"></div>
@@ -83,6 +147,12 @@
             <span class="last-page">页</span>
         </div>
     </section>
+    <section>
+        <div class="copyright">CopyRight @ 四川长虹软件与服务中心 2017 - 2020</div>
+    </section>
 </footer>
+<script src="jquery-2.1.0.min.js"></script>
+<script src="bootstrap-treeview.js"></script>
+<script src="platformManagement.js"></script>
 </body>
 </html>
